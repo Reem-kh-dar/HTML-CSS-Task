@@ -1,0 +1,562 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #00b8b8;
+    --dark-main: #008c8c;
+    --text-color: #333;
+    --light-bg: #f5fafb;
+    --border-color: #dde8ec;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.navbar {
+    border-bottom: 2px solid var(--main-color);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.nav-icons .icon:hover{
+transform :scale(1.2);
+}
+
+.logo img,
+.logo-img {
+    height:45px;
+    width:auto;
+}
+
+.nav-links a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: var(--main-color);
+}
+
+.nav-icons {
+    font-size: 18px;
+}
+
+
+.hero {
+    padding: 60px 0 70px;
+    background-image: url("image/hero-bg.png"); 
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+/* السطر الصغير WELCOME TO */
+.hero-tagline {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+/* BOOK STORE */
+.hero-title {
+    font-size: 46px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.hero-book {
+    color: #000;        
+    font-weight: 700;
+}
+
+.hero-store {
+    color: var(--main-color);  
+    font-weight: 700;
+    margin-left: 6px;
+}
+
+.hero-desc {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 430px;
+}
+
+
+.btn {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--dark-main);
+}
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-main-img {
+    width: 100%;
+    max-width: 430px;
+    display: block;
+}
+
+
+.features {
+    padding: 40px 0 20px;
+}
+
+.features-row {
+    display: flex;
+    gap: 20px;
+}
+
+.feature-box {
+    flex: 1;
+    text-align: center;
+    padding: 18px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+
+
+
+.feature-box h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.feature-box p {
+    font-size: 13px;
+    color: #555;
+}
+
+
+.about {
+    padding: 40px 0 50px;
+}
+
+.about-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-img img {
+    width: 550px;
+    max-width: 420px;
+}
+
+.about-text h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.books-section {
+    padding: 35px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 22px;
+}
+
+
+.card-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+
+.card-row::-webkit-scrollbar {
+    height: 6px;
+}
+.card-row::-webkit-scrollbar-track {
+    background: #e2f3f4;
+}
+.card-row::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 3px;
+}
+
+
+
+
+.book-card {
+    min-width: 180px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.book-img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.book-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.book-author {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 2px;
+}
+
+.book-genre {
+    font-size: 12px;
+    color: var(--main-color);
+    margin-bottom: 4px;
+}
+
+.book-price {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+
+.btn-small {
+    padding: 6px 14px;
+    border-radius: 3px;
+    border: 1px solid var(--main-color);
+    background-color: #fff;
+    color: var(--main-color);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-small:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+
+
+
+
+.reviews-section {
+    padding: 50px 0;
+}
+
+.reviews-container {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.review-card {
+    width: 260px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 18px;
+    position: relative;
+}
+
+.review-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.review-text {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+.digital-banner {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.banner-img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+
+.btn-banner {
+    position: absolute;
+    left: 40px;        
+    bottom: 40px;      
+    padding: 10px 22px;
+    background-color: #fff;
+    color: var(--main-color);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.btn-banner:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.blog {
+    padding: 40px 0 50px;
+}
+
+.blog-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.blog-card {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 10px 12px 14px;
+}
+
+.blog-author {
+    font-size: 12px;
+    color: var(--main-color);
+    margin-bottom: 4px;
+}
+
+.blog-content h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+
+.footer {
+    background-color: #0b1f26;
+    color: #d3dde0;
+    padding: 30px 0 15px;
+    font-size: 13px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-col h4 {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.footer-col a {
+    display: block;
+    color: #d3dde0;
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+.footer-col a:hover {
+    color: var(--main-color);
+}
+
+.footer-col input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 6px;
+}
+
+.btn-small.full {
+    width: 100%;
+}
+
+.copy {
+    text-align: center;
+    color: #9aa6aa;
+}
+
+
+.footer {
+    background: #f7fafa;
+    padding: 50px 0 20px;
+    border-top: 1px solid #d6e6e6;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+.footer-col a,
+.footer-col p {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: var(--main-color);
+}
+
+.footer-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.newsletter {
+    margin-top: 10px;
+}
+
+.newsletter input {
+    padding: 8px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.newsletter button {
+    padding: 8px 12px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: var(--dark-main);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+}
